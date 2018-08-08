@@ -1,3 +1,5 @@
+
+
 const api = 'http://localhost:3001'
 
 let token = localStorage.token
@@ -9,19 +11,15 @@ if (!token)
     'Authorization' : token
   }
 
-  // export const getAll = () => {
-  //   return fetch(`${api}/categories`, {headers})
-  //     .then(res => {res.json())
-  //     .then(data => data.categories)
-  //     .catch(error => console.log(error))
-  // }
 
 export const getAll = () => {
-  return (
-    fetch(`${api}/categories`, {headers})
-      .then(response => response.json())
-      .then(data => data)
-  )
+  return fetch(`${api}/categories`, {headers})
+    .then(response => response.json())
+
+
 
 
 }
+
+
+

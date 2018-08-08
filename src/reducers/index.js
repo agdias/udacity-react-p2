@@ -7,22 +7,21 @@ import {
 
 
 
-const categoryReducer = (state = [], action) => {
+const categoryReducer = ( state = [], action ) => {
 
-
-  const { categories } = action
   switch (action.type) {
-    case FETCH_CATEGORIES_BEGIN:
 
+    case FETCH_CATEGORIES_BEGIN:
       return {
         ...state
       }
     case FETCH_CATEGORIES_SUCCESS:
-      
+
       return {
         ...state,
-        ...categories
+        categories: action.categories
       }
+
 
     case FETCH_CATEGORIES_FAILURE:
       return {
