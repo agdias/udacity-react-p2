@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:700|Lato|Roboto:300');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700|Lato|Roboto:300,500');
 
 html {
   box-sizing: border-box;
@@ -65,9 +65,6 @@ li {
   margin:  0;
   width: 100%;
   background: #fff;
-
-
-
 }
 
 .inner__header {
@@ -84,11 +81,12 @@ li {
 }
 
 .menu-bar {
-  color: #e56933;
+  color: #797979;
   display: flex;
   align-items: center;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
+  font-weight: 300;
   padding: 20px;
 }
 .title {
@@ -105,31 +103,32 @@ li {
    CONTENT AREA
 */
 
-.content {
+.content-wrapper {
   display: flex;
-  width: 90%;
-  margin: 125px auto;
-  background: #c0c0c0;
-
-
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background: #;
 }
 
 .posts {
 
-  width: 55%;
-  margin: 0 20px;
+  width: 55vw;
+
   display: flex;
   flex-wrap: wrap;
   height: auto;
   display:flex;
   flex-wrap: wrap;
 
+
 }
 
 .post  {
   width: 100%;
-  margin: 10px;
-  background:#fff;
+
+
   border-radius: 10px;
   border: thin solid #797979;
   padding: 20px;
@@ -137,8 +136,8 @@ li {
 
 }
 
-.admin {
-  background: #fff;
-  width: 25%;
+.ads {
+
+  width: 45vw;
 
 }

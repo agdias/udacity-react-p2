@@ -4,9 +4,10 @@ import './index.css';
 import App from './App';
 import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
-import categoryReducer from './reducers'
+import rootReducer  from './reducers/index'
 import registerServiceWorker from './registerServiceWorker'
 import { Provider } from 'react-redux'
+
 
 
 
@@ -21,12 +22,12 @@ const logger = store => next => action => {
 
 
 const store = createStore(
-  categoryReducer,
+  rootReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
   applyMiddleware(thunk, logger)
 )
 //
-// store.dispatch(fetchCategories());
+
 
 
 ReactDOM.render(

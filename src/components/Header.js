@@ -7,17 +7,18 @@ import { fetchCategories } from '../actions'
 
 class Header extends React.Component {
 
-
-
    componentDidMount() {
-     const {categories, dispatch } = this.props
+
+     const { dispatch } = this.props
      dispatch(fetchCategories());
    }
 
    render() {
 
      const { categories } = this.props;
-
+     Object.values(categories).map((category) => {
+       console.log(category.name)
+     })
      return (
         <div>
             <div className='inner__header'>
@@ -33,15 +34,19 @@ class Header extends React.Component {
             </div>
 
             <div >
-              <div class="menu-bar">
-                  <ul>
-                    {categories && categories.map(category =>
+              <div className="menu-bar">
+                <ul>
+                  {(Object.values(categories).length > 0) && Object.values(categories).map((category) => {
+                    return (
                       <li key={category.name}>
-                        {capitalize(category.name)}
-                      </li>
-                    )}
-                  </ul>
-                </div>
+                      {capitalize(category.name)}
+                    </li>
+                    )
+
+                  })}
+                </ul>
+
+              </div>
             </div>
         </div>
      )
@@ -49,9 +54,6 @@ class Header extends React.Component {
  }
 
  const mapStateToProps = ({categories}) => ({categories});
-
-
-
 
  export default  connect(mapStateToProps)(Header);
 

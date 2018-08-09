@@ -12,15 +12,8 @@ if (!token)
   }
 
 
-export const getAll = () => {
-  return fetch(`${api}/categories`, {headers})
-    .then(response => response.json())
-    .then(data => data.categories)
-
-
-
-
-}
-
-
+  export const getAll = () =>
+  fetch(`${api}/posts`, { headers })
+    .then(res => res.json())
+    .then(data => data)
 
