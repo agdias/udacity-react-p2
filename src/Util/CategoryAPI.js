@@ -18,8 +18,6 @@ export const getAll = () => {
     .then(data => data.categories)
 
 
-
-
 }
 
 

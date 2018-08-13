@@ -1,18 +1,36 @@
 import React from 'react'
 import Header from './Header'
-import Content from './Content'
+import Posts from './Posts'
 
-function Container() {
-    return (
+
+class  Container extends React.Component {
+
+  componentDidMount() {
+    const { dispatch } = this.props
+
+  }
+  render() {
+      return (
         <div className='container'>
           <header  className='hero'>
             <Header />
           </header>
           <main>
-            <Content />
+            <div className="content-wrapper">
+              <Posts />
+            <div className="ads">
+
+            </div>
+            </div>
+
           </main>
         </div>
     )
+  }
+}
+
+const mapStateToProps = () => {
+
 }
 
 export default Container;

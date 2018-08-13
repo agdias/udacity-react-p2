@@ -1,7 +1,10 @@
 import React  from 'react'
 import capitalize from 'capitalize-first-letter'
 import { connect } from 'react-redux';
+import { Route } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { fetchCategories } from '../actions'
+import select  from '@material/select'
 
 
 
@@ -16,9 +19,8 @@ class Header extends React.Component {
    render() {
 
      const { categories } = this.props;
-     Object.values(categories).map((category) => {
-       console.log(category.name)
-     })
+
+
      return (
         <div>
             <div className='inner__header'>
@@ -30,22 +32,21 @@ class Header extends React.Component {
                   <path className="logo" d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-4 6V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1z"/>
                 </svg>
 
-              <div className="title">readable</div>
-            </div>
-
-            <div >
-              <div className="menu-bar">
-                <ul>
+              <div className="title">readable tech talks</div>
+              <div className='mdc-select mdc-select--box '>
+                <select className='mdc-select__native-control'>
+                  <option value='all'>Home</option>
                   {(Object.values(categories).length > 0) && Object.values(categories).map((category) => {
                     return (
-                      <li key={category.name}>
-                      {capitalize(category.name)}
-                    </li>
+                      <option key={category.name}  value={category.name}>{category.name}</option>
+
                     )
-
                   })}
-                </ul>
-
+                  </select>
+              </div>
+            </div>
+            <div >
+              <div className="menu-bar">
               </div>
             </div>
         </div>

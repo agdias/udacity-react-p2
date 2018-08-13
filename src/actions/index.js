@@ -1,11 +1,17 @@
 import * as CategoryAPI from '../Util/CategoryAPI';
 import * as PostAPI from '../Util/PostAPI';
 import { FETCH_CATEGORIES,
-         FETCH_POSTS
+         FETCH_POSTS,
+         CHANGE_DISPLAY
        }
 from '../assets/types'
 
-
+export const setDisplay = (filter) => {
+  return ({
+    type: CHANGE_DISPLAY,
+    filter
+  })
+}
 export const fetchCategoriesSuccess = (categories) => {
 
   return ({
