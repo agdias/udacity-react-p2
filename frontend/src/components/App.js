@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom'
 import Header  from './Header'
 import Posts  from './Posts'
 import PostsByCategories from './PostsByCategories'
-import Comment from './Comment'
+import Comments from './Comments'
 
 class App extends React.Component {
 
@@ -17,7 +17,7 @@ class App extends React.Component {
                <Posts />
              )} />
             <Route path="/:category/posts" component={PostsByCategories} />
-            <Route path="/:postid/comments" component={Comment} />
+            <Route path="/:postid/comments" component={Comments} />
           </div>
       )
   }

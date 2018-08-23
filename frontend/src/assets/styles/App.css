@@ -16,6 +16,10 @@ body {
   background: whitesmoke;
 }
 
+input {
+  width: 100%;
+}
+
 ul {
   list-style: none;
 }
@@ -33,8 +37,6 @@ ul {
   width: 100%;
   height: 100vh;
   background: #fff;
-  border-left: thin solid #03d2ff;
-
 
 }
 .app-header {
@@ -45,7 +47,7 @@ ul {
 }
 
 .logo {
-  fill: tomato;
+  fill: lightseagreen;
   margin: 0 1em;
 }
 
@@ -54,14 +56,13 @@ ul {
   color: whitesmoke;
 }
 
-.sub-header {
+.top-menu {
+  display: inline-block;
 
-  background: #fff;
-  border: thin solid #d1d1d1;
-  padding: 0.1em;
-  position: "static";
-  width: 100%;
+}
 
+.top-menu li {
+  list-style: none;
 }
 
 .sub-header li {
@@ -71,7 +72,7 @@ ul {
 
 .sub-header li a {
   text-decoration: none;
-  color:#808080
+ color:white;
 }
 
 .sub-header li a:hover {
@@ -83,6 +84,8 @@ ul {
   align-items: center;
   justify-content: flex-start;
   position: static;
+ 
+  
 }
 
 .menu-icon {
@@ -103,6 +106,7 @@ ul {
   padding: 10px;
   margin: 20px 30px;
   box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.2);
+ 
 }
 
 .post-header {
@@ -130,31 +134,60 @@ ul {
   max-width: 200px;
   align-items: center;
   justify-content: space-around;
+  margin: 0 20px;
 }
 
-.add-comments {
+.add-comment-box {
+  width: 100%;
+  background: greenyellow;
+}
+
+/* .add-comments {
   display: block;
   background-image: url('../icons/comment.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 28px;
   font-size: 0;
+} */
+
+.create-comment {
+  display: flex;
+
+  max-width: 80vw;
+  
+  padding: 10px;
+  margin: 20px 30px;
+  box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.2);
+  
+}
+
+.create-comment-details {
+  width: 100%;
+  
+  padding: 10px;
 }
 
 .comments {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
 
+  width: 100%;
+  height:auto;
+
+  border: thin dotted lighgtray;
+
+}
+
+.comments-header {
+  background: black;
+  color: whitesmoke;
+  text-align: center;
 }
 
 .comments-box {
 
-  
   max-width: 80vw;
   padding: 10px;
   margin: 20px 30px;
-  
 }
 
 .comment {
@@ -164,11 +197,12 @@ ul {
   border: thin solid #f2f2f2;
   margin-bottom: 20px;
   padding: 20px;
+  border-left: thick solid lightseagreen;
 }
 
-.comment-body {
+.comments-body {
   
-  width: 40%;
+  width: 100%;
   margin: 0 40px;
   font-weight: 100;
 }

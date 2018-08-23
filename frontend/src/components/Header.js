@@ -2,8 +2,12 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { fetchCategories } from '../assets/actions';
-// import calendar from '../assets/icons/calendar.svg'
-// import score from '../assets/icons/score.svg'
+import IconButton from '@material-ui/core/IconButton'
+import Message from '@material-ui/icons/Message'
+import AddComment from '@material-ui/icons/AddCommentOutlined'
+import Calendar from '@material-ui/icons/CalendarTodayOutlined'
+import red from '@material-ui/core/colors/red';
+
 
 class Header extends React.Component {
 
@@ -26,28 +30,37 @@ class Header extends React.Component {
                     </svg>
                     </div>
                 </Link>
-                    <div className="title">
+                <div className="title">
                     <h2> readable talk about </h2>
-                    </div>
+                </div>
+                <div className='sub-header'>
+                  <div className="menu-bar">
+                    <ul>
+                        <li> <Link to="/">home</Link></li>
+                        {Object.values(categories).map((category) => {
+                        return (
+                            <li key={category.name}>
+                            <Link to={`/${category.name}/posts`}>  {category.name} </Link>
+                            </li>
+                        )
+                        })}
+                        <li> 
+                        <IconButton>
+                           <AddComment  /> 
+                        </IconButton> 
+                      </li>
+                      <li> 
+                      <IconButton>
+                         <Calendar /> 
+                      </IconButton> 
+                    </li>
+                    </ul>
+                  </div>
+
+                </div>
+                  
                 </header>
-                <div className="sub-header">
-                    <div className="menu-bar">
-                        <ul>
-                            <li> <Link to="/">home</Link></li>
-                            {Object.values(categories).map((category) => {
-                            return (
-                                <li key={category.name}>
-                                <Link to={`/${category.name}/posts`}>  {category.name} </Link>
-                                </li>
-                            )
-                            })}
-                        </ul>
-
-                        {/* <div className='menu-icon'><img src={calendar}/></div>
-                        <div classname='menu-icon'><img src={score}/></div> */}
-
-                    </div>
-                 </div>
+                  
             </div>
         )
     }

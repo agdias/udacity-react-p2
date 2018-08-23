@@ -12,22 +12,28 @@ if (!token)
   }
 
 export const getPosts = () => {
-  return fetch(`${api}/posts`, {headers})
+  return fetch(`${api}/posts`, { headers })
     .then(response => response.json())
     .then(data => data)
 }
 
 export const getPostByCategory = (category) => {
 
-   return  fetch(`${api}/${category}/posts`, {headers})
+   return  fetch(`${api}/${category}/posts`, { headers })
         .then(response => response.json())
         .then(data => data)
 
 }
 
+export const getPostById = (id) => {
+  return fetch(`${api}/posts/${id}`, { headers })
+         .then(response => response.json())
+         .then( data => data )
+}
+
 export const getCommentByPost = (postId) => {
 
-  return fetch(`${api}/posts/${postId}/comments`, {headers})
+  return fetch(`${api}/posts/${postId}/comments`, { headers })
   .then(response => response.json())
   .then(data => data)
 

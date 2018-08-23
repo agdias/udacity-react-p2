@@ -7,6 +7,18 @@ import { Link } from 'react-router-dom'
 import { fetchCommentsByPost } from '../assets/actions';
 import Comment from './Comment'
 
+import IconButton from '@material-ui/core/IconButton'
+import DeleteIcon from '@material-ui/icons/DeleteOutlined'
+import Thumb_Up from '@material-ui/icons/ThumbUpOutlined'
+
+import Thumb_Down from '@material-ui/icons/ThumbDownOutlined'
+import AddComment from '@material-ui/icons/AddCommentOutlined'
+import Chat from '@material-ui/icons/ChatOutlined'
+import Score from '@material-ui/icons/ScoreOutlined'
+import Badge from '@material-ui/core/Badge'
+import { TextField } from '../../node_modules/@material-ui/core';
+
+
 
 class Post extends React.Component {
 
@@ -43,45 +55,40 @@ class Post extends React.Component {
               </div>
               <div className='post-actions'>
 
-                <div className='comments'>
-                  <Link to={
-                    {
-                      pathname: `/${post.id}/comments`,
-                      state: { postid: post.id }
+              <IconButton >
+                <Thumb_Up />
+              </IconButton>
+              <Badge color='secondary' badgeContent={post.voteScore} >
+                <IconButton >
+                 <Score />
+                </IconButton>
+              </Badge>
+
+              <IconButton >
+                <Thumb_Down />
+              </IconButton>
+              <Link to={
+                      {
+                        pathname: `/${post.id}/comments`,
+                        state: { postid: post.id , postTitle: post.title}
+                      }
                     }
-                  }
-                  >
-                    <img alt='comments' src={comment} />
-                 </Link>
-                 {post.commentCount}
-                </div>
-                <div className='post-like'>
-                   <img   alt='thumb_up' src={thumb_up} />
-                </div>
-                <div className='post-score'>
-                  {post.voteScore}
-                </div>
-                <div className='post-like'>
-                   <img  alt='thumb_down' src={thumb_down} />
-                </div>
+              >
+                
+                <Badge color='secondary' badgeContent={post.commentCount} >
+                  <IconButton >
+                  <Chat/>
+                  </IconButton>
+                </Badge>
+              </Link>
+             <IconButton >
+              < DeleteIcon />
+             </IconButton>
 
               </div>
 
           </div>
-          {post.commentCount > 0 &&
-            <div className='comments-box'>
-             {showingComments.length > 0 &&
-               showingComments.map((comment) => {
-                 return (
-                   <Comment comment={comment} />
-                 )
-               })
-            
-            }
-            </div>
-          
-          
-          }
+         
         
 
         </div>
