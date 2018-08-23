@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import comment from '../assets/icons/comment.svg'
 import { Link } from 'react-router-dom'
 import { fetchCommentsByPost } from '../assets/actions';
+import Comment from './Comment'
 
 
 class Post extends React.Component {
@@ -67,6 +68,21 @@ class Post extends React.Component {
               </div>
 
           </div>
+          {post.commentCount > 0 &&
+            <div className='comments-box'>
+             {showingComments.length > 0 &&
+               showingComments.map((comment) => {
+                 return (
+                   <Comment comment={comment} />
+                 )
+               })
+            
+            }
+            </div>
+          
+          
+          }
+        
 
         </div>
 

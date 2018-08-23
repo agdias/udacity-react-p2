@@ -14,8 +14,13 @@ class Posts extends React.Component {
 
     }
 
-    render() {
+    getAvatar = () => {
+      const randomNumber = Math.floor(Math.random() * Math.floor(3));
+      return randomNumber;
+    }
 
+    render() {
+       console.log('avatar',this.getAvatar());
        const { posts } = this.props
        const showingPosts = Object.values(posts.posts)
        showingPosts.sort(sortBy('-voteScore'))

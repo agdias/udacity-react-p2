@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:700|Lato|Roboto:300,500|Roboto+Condensed:100');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,700|Lato|Roboto:300,500|Roboto+Condensed:100, 300');
 
 * , *:before, *:after {
   -webkit-box-sizing: border-box;
@@ -41,7 +41,7 @@ ul {
   color: #fff;
   display: flex;
   align-items: center;
-  background: #fff;
+  background: #4c4c4c;
 }
 
 .logo {
@@ -51,7 +51,7 @@ ul {
 
 .title {
   font-family: 'Montserrat', sans-serif;
-  color: #808080;
+  color: whitesmoke;
 }
 
 .sub-header {
@@ -150,8 +150,37 @@ ul {
 
 .comments-box {
 
+  
+  max-width: 80vw;
+  padding: 10px;
+  margin: 20px 30px;
+  
+}
 
+.comment {
+  display: flex;
+  align-items: center;
   width: 100%;
+  border: thin solid #f2f2f2;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.comment-body {
+  
+  width: 40%;
+  margin: 0 40px;
+  font-weight: 100;
+}
+.comment-author {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 12px;
+}
+
+.comment-text {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
 }
 
 .comment-header {
@@ -166,6 +195,23 @@ ul {
   text-align: center;
   margin-right: 20px;
   color: #fff;
+
+}
+
+.comment-actions {
+  display: flex;
+}
+
+.comment-like {
+  margin: 0 20px;
+ 
+}
+
+.avatar {
+ width: 30px;
+ border: thin solid red;
+ background-image: url('../icons/face.svg');
+ background-repeat: no-repeat;
 
 }
 
