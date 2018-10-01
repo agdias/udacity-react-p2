@@ -1,0 +1,101 @@
+
+.comments-icon {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    background-image: url('../icons/comments.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25px;
+    font-size: 0;
+
+}
+
+.dislike-icon {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    background-image: url('../icons/arrow-down.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    font-size: 0;
+}
+
+.like-icon {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    background-image: url('../icons/arrow-up.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    font-size: 0;
+}
+
+.edit {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    background-image: url('../icons/edit.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    font-size: 0;
+
+}
+
+.delete {
+
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    background-image: url('../icons/delete.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    font-size: 0;
+
+}
+
+
+
+.toolbar {
+
+    width: 500px;
+    margin: 10px 0;
+
+
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+}
+
+
+
+.toolbar button {
+    border: none;
+}
+
+.toolbar ul {
+    display: flex;
+    align-items: center;
+}
+
+.toolbar li {
+    margin-top: 0;
+
+    margin-right: 20px;
+}
+
+

@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat:500|Oswald:300');
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html, body, .root {
+    height: 100%;
+}
+body {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+
+body, .app {
+    background: #f5f5f5;
+}
+
+ul, li {
+    list-style: none;
+    display: inline-block;
+}
+
+li a {
+    text-decoration: none;
+}
+li a:hover {
+    color: tomato;
+}
+
+
+
+.app {
+    width: 100%;
+}
+
+
+.header {
+  padding-top: 60px;
+
+}
+
+.category-menu li {
+    margin: 0 20px;
+}
+
+.create-post {
+    margin: 40px 20px;
+}
+
+.header-top {
+
+    width: 100%;
+    top: 0;
+    border-bottom: 1px solid #d5d8df;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: #fff;
+}
+
+.close-create-post {
+
+
+    margin: 30px 0;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-image: url('../icons/arrow_back.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    font-size: 0;
+  }
+
+  .create-post-form {
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .create-post-details input {
+    width: 100%;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    font-size: inherit;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: 0;
+  }
+
+  .create-post-details button {
+    margin-top: 20px;
+    background: #ccc;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: inherit;
+    border: none;
+    outline: 0;
+  }
+
+  .create-post-details select {
+      width: 100%;
+      padding: 5px 10px;
+      margin-bottom: 10px;
+      font-size: inherit;
+      -webkit-appearance: none; /* WebKit/Chromium */
+      -moz-appearance: none; /* Gecko */
+      border-bottom: 1px solid #ccc;
+  }
+
+  .create-post-details option {
+      padding: 5px;
+      color: red;
+      font-size: inherit;
+      border: none;
+  }
+
+
+.logo {
+
+    /* padding: 20px 20px 20px 60px; */
+    font-size: 2.2em;
+    border: 0;
+    outline: none;
+    font-family: 'Lato', serif;
+    color: tomato;
+}
+.logo a {
+    text-decoration: none;
+    color: tomato;
+}
+
+.toolbar {
+    width: 100%;
+    background: white;
+    margin: 88px 0;
+    border: 1px solid #d5d8df;
+
+}
+
+.posts {
+
+    margin:50px 50px;
+    background: greeyellow;
+
+    width: 75%;
+    height:auto;
+}
+
+.post {
+    width: 60%;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    display: flex;
+}
+
+.post-footer {
+    margin: 5px 5px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+}
+
+.post-footer li {
+    margin: 0,0;
+}
+
+.post-details {
+
+
+    margin: 88px auto;
+    background: whitesmoke;
+
+}
+
+.sort-menu li {
+  margin: 0 20px;
+}
+
+.balance {
+    width: 8%;
+    margin: 0 0;
+    background: #f8f9fa;
+    text-align: center;
+}
+
+.post-box{
+
+    width: 90%;
+    background: #fff;
+}
+
+.post-header {
+    margin: 5px 5px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+
+}
+
+.post-title {
+    margin: 5px 5px;
+    font-family: 'Montserrat', sans-serif;
+    color: darkslategrey;
+    font-size: 20px;
+}
+
+.post-body {
+    margin: 5px 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+.arrow-up {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-image: url('../icons/arrow-up.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    font-size:0;
+
+}
+
+
+
+.arrow-down {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-image: url('../icons/arrow-down.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    font-size:0;
+
+}
+
+.score {
+
+    font-size: 13px;
+}
+
+.comments {
+    /* margin: 30px 0; */
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url('../icons/comments.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: 30px; */
+    font-size: 16px;
+}
