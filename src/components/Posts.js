@@ -1,0 +1,54 @@
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import sortBy  from 'sort-by'
+import Post  from './Post'
+import { fetchPosts } from '../assets/flow/actions'
+import {
+    Alert,
+    Col,
+    Row
+} from 'react-bootstrap'
+
+
+
+class Posts extends Component {
+
+    componentDidMount() {
+        const { dispatch } = this.props
+        dispatch(fetchPosts())
+    }
+
+    render() {
+
+        const { posts,sortReducer } = this.props
+
+        const showingPosts = Object.values(posts)
+        sortReducer && showingPosts.sort(sortBy(sortReducer))
+
+        return(
+            <div className="posts">
+              <Row>
+                <Col md={8}>
+                 {showingPosts.length > 0
+                    ?
+                      showingPosts.map((post) => {
+                          return (
+                              <Post key={post.id} post={post} />
+                          )
+
+                        })
+                    : <Alert bsStyle="info">There are no Posts. Be the first to publish</Alert>
+
+                }
+                </Col>
+
+              </Row>
+            </div>
+        )
+    }
+}
+
+const mapStateToProps = ({posts, sortReducer}) => ({posts, sortReducer})
+
+export default connect(mapStateToProps)(Posts)
+
