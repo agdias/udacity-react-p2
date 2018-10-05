@@ -1,9 +1,13 @@
-Readable
+# Readable
+This is Readable, a place to talk about React, Redux and everything about the Udacity universe.
+It is based upon Reddit (https://www.reddit.com/) and was elaborated as the  project for
+the Udacity´s React Nanodegree Redux module.
 
-Installation
+## Installation
+To get Readable up and running you must first clone the Readable API Server from github.
+* git clone https://github.com/udacity/reactnd-project-readable-starter.git
+Then you clone the Readable project from my github repository.
+* git clone https://github.com/agdias/udacity-react-p2.git
 
-Usage
 
-1. What steps need to be taken
-2. What should the user already have installed or configured?
-3. What might they have a hard time understanding right away?
+
