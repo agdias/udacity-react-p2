@@ -30,14 +30,14 @@ class Posts extends Component {
               <Row>
                 <Col md={8}>
                  {showingPosts.length > 0
-                    ?
+                    &&
                       showingPosts.map((post) => {
                           return (
                               <Post key={post.id} post={post} />
                           )
 
                         })
-                    : <Alert bsStyle="info">There are no Posts. Be the first to publish</Alert>
+
 
                 }
                 </Col>

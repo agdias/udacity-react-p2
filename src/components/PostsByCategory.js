@@ -26,7 +26,7 @@ class PostsByCategory extends Component {
            <div className="create-post">
            <ul>
             {showingPosts.length > 0
-                ?
+                &&
                 showingPosts.map(post => {
                     return (
                         <li key={post.title}>
@@ -35,8 +35,7 @@ class PostsByCategory extends Component {
 
                     )
                 })
-                :
-                 <Alert bsStyle="info">There are no posts for this category. Be the first to publish.</Alert>
+
             }
            </ul>
 

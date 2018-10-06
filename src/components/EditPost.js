@@ -43,7 +43,7 @@ class PostEdit extends Component {
       event.preventDefault()
 
       ReadableAPI.editPost(id,newPost)
-      debugger
+
       this.props.history.goBack()
   }
 

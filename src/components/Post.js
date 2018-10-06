@@ -33,7 +33,7 @@ class Post extends Component {
       ReadableAPI.deletePost(id)
 
       dispatch(fetchPosts())
-      debugger
+
     }
 
 
