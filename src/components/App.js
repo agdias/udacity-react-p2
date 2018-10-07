@@ -29,15 +29,16 @@ class App extends Component {
           <Header />
 
 
-          <Switch>
-            <Route  path="/editpost" component={EditPost} />
-            <Route exact path="/" component={Posts} />
-            <Route path="/createpost" component={CreatePost} />
-            <Route exact path="/:category" component={PostsByCategory} />
-            <Route  path="/:category/:post_id" component={PostDetails} />
-            <Route path="/editComment" component={EditComment} />
-            <Route component={Four0Four} />
-          </Switch>
+
+              <Route  path="/editpost" component={EditPost} />
+              <Route exact path="/" component={Posts} />
+              <Route path="/createpost" component={CreatePost} />
+              <Route exact path="/:category" component={PostsByCategory} />
+              <Route  path="/:category/:post_id" component={PostDetails} />
+              <Route  path="/editcomment" component={EditComment} />
+              {/* <Route component={Four0Four} /> */}
+
+
 
         </Grid>
 
