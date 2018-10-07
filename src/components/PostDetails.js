@@ -223,7 +223,7 @@ class PostDetails extends Component {
                <div>
                  <ul>
                    {showingComments.length > 0
-                    ?
+                    &&
                        showingComments.map((comment) => {
                          return (
                           <li className="comments" key={comment.id}>
@@ -232,10 +232,7 @@ class PostDetails extends Component {
                          )
 
                        })
-                    :
-                    <Alert className="comments" bsStyle="info">
-                      No comments available yet
-                    </Alert>
+
 
 
                    }
