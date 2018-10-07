@@ -7,6 +7,18 @@
     margin-top: 400px;
 }
 
+.alert {
+    font-size: 60px;
+    text-align: center;
+}
+.alert-p {
+    font-size: 36px;
+    text-align: center;
+    background: #ff6666;
+    padding: 60px;
+    color: #fff;
+}
+
 .posts {
     margin-top: 140px;
 }

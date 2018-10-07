@@ -7,6 +7,7 @@ import * as ReadableAPI from '../utils/ReadableAPI'
 import * as Utils from '../utils/Utils'
 import sortBy from 'sort-by'
 import { Link } from 'react-router-dom'
+import Four0Four  from './Four0Four'
 
 import {
   Alert,
@@ -15,7 +16,7 @@ import {
     Row,
     Button,
     Glyphicon,
-    Jumbotron
+
 
 } from 'react-bootstrap'
 
@@ -122,11 +123,7 @@ class PostDetails extends Component {
 
           <div className="post-details">
             {!posts.id
-              ?  <Jumbotron>
-
-                    404 - Post does not exist
-                  </Jumbotron>
-
+              ?  <Four0Four />
               :
                 <div>
                   <Row>

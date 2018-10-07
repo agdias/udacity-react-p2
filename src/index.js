@@ -8,23 +8,23 @@ import rootReducer from './assets/flow/reducers'
 
 import './index.css';
 import './assets/styles/layout.css'
-import App from './App';
+import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
-// const logger = store => next => action => {
-//     console.group(action.type)
-//     console.info('dispatching', action)
-//     let result = next(action)
-//     console.log('next getstate', store.getState())
-//     console.groupEnd('action.type',action.type)
-//     return result
-//   }
+const logger = store => next => action => {
+    console.group(action.type)
+    console.info('dispatching', action)
+    let result = next(action)
+    console.log('next getstate', store.getState())
+    console.groupEnd('action.type',action.type)
+    return result
+  }
 
 
 const store = createStore(
   rootReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-  applyMiddleware(thunk)
+  applyMiddleware(thunk, logger)
 )
 
 ReactDOM.render(
